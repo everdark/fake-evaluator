@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fake-evaluator"
+version = "0.1.0"
+description = ""
+authors = ["Kyle Chung <kylechun9@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.9"
+opentelemetry-api = "^1.22.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = ">=8.13,<9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
