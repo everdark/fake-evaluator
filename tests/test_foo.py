@@ -7,5 +7,4 @@ def test_do_something_right():
 
 
 def test_do_something_wrong():
-    with pytest.raises(Exception):
-        do_something("1")
+    assert do_something("1") == "1"

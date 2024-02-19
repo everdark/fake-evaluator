@@ -35,8 +35,9 @@ def do_something(x: int):
         cur_span.set_attribute("operation.name", "Saying hello!")
         cur_span.set_attribute("operation.other-stuff", [1, 2, 3])
         try:
-            out = x + 1
-        except Exception as e:
+            x += 1
+
+        except TypeError as e:
             cur_span.record_exception(e)
             cur_span.set_status(Status(StatusCode.ERROR))
 
@@ -44,4 +45,4 @@ def do_something(x: int):
     end = timer()
     duration.record(end - start, {})
 
-    return out
+    return x
